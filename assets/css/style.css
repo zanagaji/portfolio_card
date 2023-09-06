@@ -215,7 +215,7 @@ button,input{
 
 /*===== Home Section =====*/
 .home{
-    background: url('../img/home-bg.jpg');
+    background: url('../img/home_bg.jpg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -236,13 +236,14 @@ button,input{
 .home_social-follow{
     font-size: var(--normal-font-size);
     position: relative;
+    color: var(--skin-color);
 }
 .home_social-follow::after{
     content: '';
     position: absolute;
     width: 1rem;
     height: 2px;
-    background-color: var(--text-color);
+    background-color: var(--skin-color);
     right: -25px;
     top: 50%;
 }
@@ -252,7 +253,7 @@ button,input{
 }
 .home_social-link{
     font-size: 1.5rem;
-    color: var(--title-color);
+    color: var(--skin-color);
     transition: 0.4s;
 }
 .home_social-link:hover{
@@ -762,7 +763,19 @@ textarea.input{
 }
 
 /*=============== FOOTER ===============*/
-
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: var(--skin-color);
+    margin-top: 2rem;
+    color: white;
+}
+footer p{
+    text-transform:capitalize;
+}
+footer a{
+    color: var(--box-color);
+}
 
 /*=============== SCROLL UP ===============*/
 
