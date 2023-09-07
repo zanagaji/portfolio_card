@@ -148,7 +148,7 @@ button,input{
 }
 .nav_logo-text{
     font-size: 1rem;
-    color: var(--title-color);
+    color: var(--body-color);
     font-weight: var(--font-bold);
     line-height: 40px;
 }
@@ -182,18 +182,23 @@ button,input{
     left: 0;
     right: 0;
     text-align: center;
+    cursor: pointer;
 }
 .social_share{
     font-size: 20px;
-    background-color: var(--skin-color);
+    background-color: var(--box-color);
+    color: var(--body-color);
     width: 10px;
     height: 10px;
     border-radius: 20%;
     
 }
+/*=============== SIDEBAR ===============*/
+
+
 /* Active Link */
 .nav_link.active-link, .nav_link:hover{
-    color: var(--skin-color);
+    color: var(--box-color);
 }
 .nav_link.active-link::after, .nav_link:hover::after{
     position: absolute;
@@ -228,7 +233,7 @@ button,input{
 .home_social{
     position: absolute;
     top: 1.8rem;
-    left: 0;
+    right: 2rem;
     display: flex;
     align-items: center;
     column-gap: 3.5rem;
@@ -264,22 +269,30 @@ button,input{
 }
 .home_title{
     font-size: var(--biggest-font-size);
+    animation: caret 1s steps(1) infinite;
+    display: flex;
+    
 }
 .home_sub{
     font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-75);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--mb-3);
+    display: flex;
+    
 }
 .home_description{
     min-width: 450px;
     margin-bottom: var(--mb-2);
+    display: flex;
+    color: white;
+    
 }
 .my-info{
     display: flex;
     column-gap: 1.8rem;
     position: absolute;
-    left: 0;
     bottom: 1.8rem;
+    color: white;
 }
 .info_item{
     display: flex;
@@ -287,13 +300,13 @@ button,input{
 }
 .info_title, .info_sub{
     font-size: var(--small-font-size);
+    color: white;
 }
 .info_title{
     font-weight: var(--font-medium);
 }
 .info_icon{
     font-size: 1.8rem;
-    color: var(--skin-color);
     margin-right: var(--mb-0-75);
 }
 
@@ -305,7 +318,7 @@ button,input{
     background-color: var(--skin-color);
     color: var(--body-color);
     padding: .75rem 1.5rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
@@ -324,7 +337,7 @@ button,input{
     transform: scale(0);
     border-radius: .5rem;
     transform-origin: center;
-    transition: 0.8s;
+    transition: .2s;
 }
 .button:hover::after{
     transform: scale(1);
@@ -538,7 +551,7 @@ button,input{
 .service_container{
     grid-template-columns: repeat(3, 250px);
     justify-content: center;
-    column-gap: 2rem;
+    column-gap: 12rem;
 }
 .service_content{
     position: relative;
@@ -601,6 +614,7 @@ button,input{
 .testimoni_date{
     font-size: var(--normal-font-size);
     margin-bottom: 25px;
+
 }
 .testimoni_profile{
     display: flex;
@@ -740,6 +754,12 @@ footer a{
 
 
 /*=============== SCROLL BAR ===============*/
+/*=============== typing animation ===============*/
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
 
 
 /*========== BREAKPOINTS ==========*/
